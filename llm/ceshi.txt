@@ -1,0 +1,146 @@
+nohup: ignoring input
+W0328 08:56:45.887000 3411250 /mnt/data/home/tiang/anaconda3/lib/python3.12/site-packages/torch/distributed/run.py:793] 
+W0328 08:56:45.887000 3411250 /mnt/data/home/tiang/anaconda3/lib/python3.12/site-packages/torch/distributed/run.py:793] *****************************************
+W0328 08:56:45.887000 3411250 /mnt/data/home/tiang/anaconda3/lib/python3.12/site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0328 08:56:45.887000 3411250 /mnt/data/home/tiang/anaconda3/lib/python3.12/site-packages/torch/distributed/run.py:793] *****************************************
+Some weights of GPTNeoForQuestionAnswering were not initialized from the model checkpoint at ./model/2.7B and are newly initialized: ['qa_outputs.bias', 'qa_outputs.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of GPTNeoForQuestionAnswering were not initialized from the model checkpoint at ./model/2.7B and are newly initialized: ['qa_outputs.bias', 'qa_outputs.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of GPTNeoForQuestionAnswering were not initialized from the model checkpoint at ./model/2.7B and are newly initialized: ['qa_outputs.bias', 'qa_outputs.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of GPTNeoForQuestionAnswering were not initialized from the model checkpoint at ./model/2.7B and are newly initialized: ['qa_outputs.bias', 'qa_outputs.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/mnt/data/home/tiang/llm/second.py", line 14, in <module>
+    model.to(device)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/transformers/modeling_utils.py", line 3162, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1340, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1326, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 100.00 MiB. GPU 0 has a total capacity of 44.31 GiB of which 54.62 MiB is free. Process 2805107 has 1.96 GiB memory in use. Process 3460336 has 880.00 MiB memory in use. Process 3515482 has 1.85 GiB memory in use. Process 3515481 has 1.96 GiB memory in use. Process 3515480 has 1.85 GiB memory in use. Process 3515479 has 1.85 GiB memory in use. Process 3515478 has 1.85 GiB memory in use. Process 3515477 has 1.96 GiB memory in use. Process 3515476 has 1.96 GiB memory in use. Process 3515475 has 1.85 GiB memory in use. Process 3515474 has 1.96 GiB memory in use. Process 3515473 has 1.85 GiB memory in use. Process 3413188 has 6.10 GiB memory in use. Including non-PyTorch memory, this process has 5.55 GiB memory in use. Process 3413186 has 5.55 GiB memory in use. Process 3413190 has 5.23 GiB memory in use. Of the allocated memory 5.12 GiB is allocated by PyTorch, and 19.19 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/mnt/data/home/tiang/llm/second.py", line 14, in <module>
+    model.to(device)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/transformers/modeling_utils.py", line 3162, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1340, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1326, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 100.00 MiB. GPU 0 has a total capacity of 44.31 GiB of which 28.62 MiB is free. Process 2805107 has 1.96 GiB memory in use. Process 3460336 has 880.00 MiB memory in use. Process 3515482 has 1.85 GiB memory in use. Process 3515481 has 1.96 GiB memory in use. Process 3515480 has 1.85 GiB memory in use. Process 3515479 has 1.85 GiB memory in use. Process 3515478 has 1.85 GiB memory in use. Process 3515477 has 1.96 GiB memory in use. Process 3515476 has 1.96 GiB memory in use. Process 3515475 has 1.85 GiB memory in use. Process 3515474 has 1.96 GiB memory in use. Process 3515473 has 1.85 GiB memory in use. Process 3413188 has 6.12 GiB memory in use. Process 3413189 has 5.55 GiB memory in use. Process 3413186 has 5.55 GiB memory in use. Including non-PyTorch memory, this process has 5.23 GiB memory in use. Of the allocated memory 4.82 GiB is allocated by PyTorch, and 1.44 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/mnt/data/home/tiang/llm/second.py", line 14, in <module>
+    model.to(device)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/transformers/modeling_utils.py", line 3162, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1340, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1326, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 100.00 MiB. GPU 0 has a total capacity of 44.31 GiB of which 28.62 MiB is free. Process 2805107 has 1.96 GiB memory in use. Process 3460336 has 880.00 MiB memory in use. Process 3515482 has 1.85 GiB memory in use. Process 3515481 has 1.96 GiB memory in use. Process 3515480 has 1.85 GiB memory in use. Process 3515479 has 1.85 GiB memory in use. Process 3515478 has 1.85 GiB memory in use. Process 3515477 has 1.96 GiB memory in use. Process 3515476 has 1.96 GiB memory in use. Process 3515475 has 1.85 GiB memory in use. Process 3515474 has 1.96 GiB memory in use. Process 3515473 has 1.85 GiB memory in use. Process 3413188 has 6.12 GiB memory in use. Process 3413189 has 5.55 GiB memory in use. Including non-PyTorch memory, this process has 5.55 GiB memory in use. Process 3413190 has 5.23 GiB memory in use. Of the allocated memory 5.12 GiB is allocated by PyTorch, and 19.19 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/mnt/data/home/tiang/llm/second.py", line 14, in <module>
+    model.to(device)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/transformers/modeling_utils.py", line 3162, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1340, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1326, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 100.00 MiB. GPU 0 has a total capacity of 44.31 GiB of which 2.62 MiB is free. Process 2805107 has 1.96 GiB memory in use. Process 3460336 has 880.00 MiB memory in use. Process 3515482 has 1.85 GiB memory in use. Process 3515481 has 1.96 GiB memory in use. Process 3515480 has 1.85 GiB memory in use. Process 3515479 has 1.85 GiB memory in use. Process 3515478 has 1.85 GiB memory in use. Process 3515477 has 1.96 GiB memory in use. Process 3515476 has 1.96 GiB memory in use. Process 3515475 has 1.85 GiB memory in use. Process 3515474 has 1.96 GiB memory in use. Process 3515473 has 1.85 GiB memory in use. Including non-PyTorch memory, this process has 6.15 GiB memory in use. Process 3413189 has 5.55 GiB memory in use. Process 3413186 has 5.55 GiB memory in use. Process 3413190 has 5.23 GiB memory in use. Of the allocated memory 5.72 GiB is allocated by PyTorch, and 10.68 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+W0328 08:56:57.416000 3411250 /mnt/data/home/tiang/anaconda3/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3413188 closing signal SIGTERM
+W0328 08:56:57.418000 3411250 /mnt/data/home/tiang/anaconda3/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3413190 closing signal SIGTERM
+E0328 08:56:57.747000 3411250 /mnt/data/home/tiang/anaconda3/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 3413186) of binary: /home/tiang/anaconda3/bin/python
+Traceback (most recent call last):
+  File "/home/tiang/anaconda3/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiang/anaconda3/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+second.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-03-28_08:56:57
+  host      : ubuntu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 3413189)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-03-28_08:56:57
+  host      : ubuntu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3413186)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
